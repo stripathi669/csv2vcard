@@ -1,4 +1,4 @@
-[![Downloads](http://pepy.tech/badge/csv2vcard)](http://pepy.tech/count/csv2vcard)
+[![Downloads](http://pepy.tech/badge/csvTovcf)](http://pepy.tech/count/csvTovcf)
 
 csv2vcard
 =========
@@ -7,7 +7,7 @@ A Python script that parses a .csv file of contacts and automatically creates vC
 Usage
 -----
 
-1. Install package with `pip3 install csv2vcard`
+1. Install package with `pip3 install csvTovcf`
 
 2. Create csv file with contacts
 
@@ -26,4 +26,4 @@ Usage
 6. Now you have 2 options for running (both will create an /export/ dir for your vCard):
 
 - Test the app with `csv2vcard.test_csv2vcard()`. This will create a Forrest Gump test vCard.
-- Use your real data `csv2vcard.csv2vcard("yourcsvfilename", ",")` where ","  is your csv delimeter. This will create all your vCards.
+- Use your real data `csv2vcard.csv2vcard("yourcsvfilename", ",", single_file=True)` where ","  is your csv delimeter. This will create many vCards or single vCard depending on the `single_file=True` paramter.

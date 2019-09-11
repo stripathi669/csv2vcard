@@ -3,7 +3,7 @@ from csv2vcard.create_vcard import create_vcard
 from csv2vcard.parse_csv import parse_csv
 
 
-def csv2vcard(csv_filename: str, csv_delimeter: str):
+def csv2vcard(csv_filename: str, csv_delimeter: str, single_file=True):
     """
     Main function
     """
@@ -11,7 +11,7 @@ def csv2vcard(csv_filename: str, csv_delimeter: str):
 
     for c in parse_csv(csv_filename, csv_delimeter):
         vcard = create_vcard(c)
-        export_vcard(vcard)
+        export_vcard(vcard, single_file)
 
 
 def test_csv2vcard():
@@ -29,4 +29,4 @@ def test_csv2vcard():
     check_export()
     vcard = create_vcard(mock_contacts[0])
     print(vcard)
-    export_vcard(vcard)
+    export_vcard(vcard, single_file=False)

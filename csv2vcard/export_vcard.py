@@ -1,11 +1,12 @@
 import os
 
-def export_vcard(vc_final):
+def export_vcard(vc_final, single_file):
     """
     Exporting a vCard to /export/
     """
     try:
-        with open(f"export/{vc_final['filename']}", "w") as f:
+        file_name = f"export/{vc_final['filename']}" if not single_file else f"export/final_export.vcf"
+        with open(file_name, "a") as f:
             f.write(vc_final['output'])
             f.close()
             print(f"Created vCard 3.0 for {vc_final['name']}.")

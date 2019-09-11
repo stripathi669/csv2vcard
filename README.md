@@ -1,8 +1,10 @@
 [![Downloads](http://pepy.tech/badge/csvTovcf)](http://pepy.tech/count/csvTovcf)
 
-csv2vcard
+csvTovcf
 =========
 A Python script that parses a .csv file of contacts and automatically creates vCards. The vCards are super useful for sending your contact details or those of your team. You can also upload them to e.g. Dropbox and use them with QR codes! You can also use them for transferring new contacts to Outlook, a new CRM etc. The specific use case in mind was to programmatically create vCards from a list of contacts in a spreadsheet, to be incorporated into business cards.
+
+Based on the work of @tech4242 on csv2vcard! 
 
 Usage
 -----
